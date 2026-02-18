@@ -2,8 +2,8 @@ from pyscript import document
 
 def get_team(event):
  
-    medi = document.getElementById("medcert").value
-    regi = document.getElementById("regis").value
+    medi = document.querySelector('input[name="medcert"]:checked').value
+    regi = document.querySelector('input[name="regis"]:checked').value
 
     grade = document.getElementById("grade")
     section = document.getElementById("section")
@@ -11,7 +11,7 @@ def get_team(event):
     team_get2 = section.value
 
     # Determine Team Name
-    if document.querySelector('input[name="regis"]:checked').value == "No" or document.querySelector('input[name="medcert"]:checked').value == "No":
+    if regi == "No" or medi == "No":
         document.getElementById("team_name").innerText = ("Please continue your online registration and/or submit your medical certificate to join a team.")
         document.getElementById("team_img").src = "test.png"
     elif document.getElementById("grade").value == "g7" and document.getElementById("section").value == "Sapphire":
@@ -65,5 +65,4 @@ def get_team(event):
     else:
         document.getElementById("team_name").innerText = "WHAT IS YOUR GRADE AND SECTION LIL BRO! You cannot escape intrams. Tell me what grade and section you are."
         document.getElementById("team_img").src = "test.png"
-
 
