@@ -10,7 +10,7 @@ player_list = [
     "7. Chua, Cade Rylie Rivera",
     "8. Eusebio, Zyan Riley Tancinco",
     "9. Evangelio, Princess Radhika Zayn Divino",
-    "10. Fado, Marianna Reinne Fabie",
+    "10. Fado, Marianna Reine Fabie",
     "11. Fermocil, Kleiser Ferida",
     "12. Fernando, Curt Joshua Nicolas",
     "13. Francia, Ethan Raphael Juanga",
@@ -33,4 +33,5 @@ player_list = [
 
 def show_list(event=None):
     container = document.getElementById("list-container")
+
     container.innerHTML = "<br>".join(player_list)
